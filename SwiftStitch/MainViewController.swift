@@ -104,6 +104,10 @@ class MainViewController: UIViewController, CameraSessionControllerDelegate {
         
         self.staticView.image = image
         
+        
+
+        CVWrapper.processImageWithOpenCV(image)
+        
     }
 }
 

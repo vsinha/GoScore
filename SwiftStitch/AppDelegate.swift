@@ -1,20 +1,20 @@
 //
 //  AppDelegate.swift
-//  SwiftStitch
+//  SwiftOpenCV
 //
-//  Created by Foundry on 04/06/2014.
-//  Copyright (c) 2014 Foundry. All rights reserved.
+//  Created by Lee Whitney on 10/28/14.
+//  Copyright (c) 2014 WhitneyLand. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
+
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }

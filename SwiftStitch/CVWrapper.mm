@@ -32,7 +32,8 @@
     if ([imageArray count]==0){
         NSLog (@"imageArray is empty");
         return 0;
-        }
+    }
+    
     cv::vector<cv::Mat> matImages;
 
     for (id image in imageArray) {
