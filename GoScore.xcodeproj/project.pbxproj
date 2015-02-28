@@ -13,7 +13,6 @@
 		C0750B871AA14E300075E5C8 /* CameraSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0750B791AA14E300075E5C8 /* CameraSessionController.swift */; };
 		C0750B881AA14E300075E5C8 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0750B7B1AA14E300075E5C8 /* CVWrapper.mm */; };
 		C0750B891AA14E300075E5C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0750B7D1AA14E300075E5C8 /* Images.xcassets */; };
-		C0750B8A1AA14E300075E5C8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0750B7E1AA14E300075E5C8 /* Info.plist */; };
 		C0750B8B1AA14E300075E5C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0750B7F1AA14E300075E5C8 /* Main.storyboard */; };
 		C0750B8C1AA14E300075E5C8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0750B801AA14E300075E5C8 /* MainViewController.swift */; };
 		C0750B8D1AA14E300075E5C8 /* stitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0750B811AA14E300075E5C8 /* stitching.cpp */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		5B06979E839A9E7A50397604 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		AB6D1AEE193F9B6600F8B0F5 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		AB7D8E83193F33B40059EE63 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AB896A82193E8E830018B9EC /* GoScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04B9B3E7302847728F269A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			children = (
 				C0750B751AA14E300075E5C8 /* GoScore */,
 				C00B39561AA130FF00308BF3 /* Pods.xcodeproj */,
-				AB6D1AEE193F9B6600F8B0F5 /* README.markdown */,
 				AB896A83193E8E830018B9EC /* Products */,
 				EE5F212F31B24F2C835C369D /* Frameworks */,
 				77742894C647031367CAB53E /* Pods */,
@@ -169,7 +166,7 @@
 		AB896A7A193E8E830018B9EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = ellipsis.com;
 				TargetAttributes = {
 					AB896A81193E8E830018B9EC = {
@@ -225,7 +222,6 @@
 			files = (
 				C0750B861AA14E300075E5C8 /* Main.storyboard in Resources */,
 				C0750B891AA14E300075E5C8 /* Images.xcassets in Resources */,
-				C0750B8A1AA14E300075E5C8 /* Info.plist in Resources */,
 				C0750B8B1AA14E300075E5C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -364,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -385,6 +381,7 @@
 				PRODUCT_NAME = GoScore;
 				SWIFT_OBJC_BRIDGING_HEADER = "GoScore/GoScore-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -400,6 +397,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GoScore;
 				SWIFT_OBJC_BRIDGING_HEADER = "GoScore/GoScore-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
