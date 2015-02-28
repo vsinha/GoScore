@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Szr-Kk-nUW">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="vax-Rb-pN5">
+            <objects>
+                <viewController id="Szr-Kk-nUW" customClass="MainViewController" customModule="GoScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w4M-Ym-pS4"/>
+                        <viewControllerLayoutGuide type="bottom" id="QuU-zQ-Wfg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6nI-lq-Vsp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-2U-mv8">
+                                <rect key="frame" x="0.0" y="338" width="375" height="329"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mbR-aE-ssf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="338"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mbR-aE-ssf" firstAttribute="top" secondItem="w4M-Ym-pS4" secondAttribute="bottom" constant="-20" id="2iR-ZH-ETk"/>
+                            <constraint firstItem="mbR-aE-ssf" firstAttribute="leading" secondItem="6nI-lq-Vsp" secondAttribute="leadingMargin" constant="-16" id="8IJ-eY-fHl"/>
+                            <constraint firstItem="QuU-zQ-Wfg" firstAttribute="top" secondItem="WM7-2U-mv8" secondAttribute="bottom" id="9oA-c1-HBq"/>
+                            <constraint firstItem="WM7-2U-mv8" firstAttribute="leading" secondItem="6nI-lq-Vsp" secondAttribute="leadingMargin" constant="-16" id="IpU-n9-T36"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WM7-2U-mv8" secondAttribute="trailing" constant="-16" id="McR-S0-koQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mbR-aE-ssf" secondAttribute="trailing" constant="-16" id="bCb-Ye-4P3"/>
+                            <constraint firstItem="QuU-zQ-Wfg" firstAttribute="top" secondItem="mbR-aE-ssf" secondAttribute="bottom" constant="329" id="vd1-B5-G3a"/>
+                            <constraint firstItem="WM7-2U-mv8" firstAttribute="top" secondItem="w4M-Ym-pS4" secondAttribute="bottom" constant="318" id="yTo-lk-4yi"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cameraView" destination="mbR-aE-ssf" id="Hp6-0d-yCg"/>
+                        <outlet property="staticView" destination="WM7-2U-mv8" id="2Y3-r4-Kds"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVL-if-d0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409.5" y="272.5"/>
+        </scene>
+    </scenes>
+</document>
