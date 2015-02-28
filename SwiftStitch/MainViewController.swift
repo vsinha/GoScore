@@ -43,13 +43,21 @@ class MainViewController: UIViewController, CameraSessionControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.cameraView.frame = self.view.frame
+        //self.cameraView.hidden = true
+
+        
         // Initialize the camera...
         //captureSession.sessionPreset = AVCaptureSessionPresetHigh
         
         cameraSessionController = CameraSessionController()
         cameraSessionController.sessionDelegate = self
         
-        self.setupPreviewLayer()
+        //self.setupPreviewLayer()
+        
+        self.staticView.bounds = self.view.bounds
+        self.staticView.frame = self.view.frame
+        self.view.bringSubviewToFront(self.staticView)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -93,21 +101,20 @@ class MainViewController: UIViewController, CameraSessionControllerDelegate {
     
     }
     
-    func handleImageCapture(image: UIImage?, error: NSError?) -> Void {
+    func handleImageCapture(capturedImage: UIImage?, error: NSError?) -> Void {
         println("captured image!")
         
-        if image == nil || error != nil {
+        if capturedImage == nil || error != nil {
             println("there was an error handling the captured image")
             return
         }
         
         
-        self.staticView.image = image
+        let processedImage = CVWrapper.processImageWithOpenCV(capturedImage)
         
+        var rotatedProcessedImage = UIImage(CGImage: processedImage.CGImage, scale: CGFloat(1.0),orientation: UIImageOrientation.Right)
         
-
-        CVWrapper.processImageWithOpenCV(image)
-        
+        self.staticView.image = rotatedProcessedImage
     }
 }
 

@@ -15,8 +15,30 @@
 
 + (UIImage*) processImageWithOpenCV: (UIImage*) inputImage
 {
-    NSArray* imageArray = [NSArray arrayWithObject:inputImage];
-    UIImage* result = [[self class] processWithArray:imageArray];
+    cv::initModule_nonfree();
+    
+    // convert our input image to the correct format
+    cv::Mat imageMat = [inputImage CVMat3];
+
+    // vector of keypoints to store
+    //cv::vector< cv::KeyPoint > keypoints;
+    
+    //-- Step 1: Detect the keypoints using SURF Detector
+    int minHessian = 400;
+    
+    cv::SurfFeatureDetector detector( minHessian );
+    
+    std::vector<cv::KeyPoint> keypoints;
+    
+    detector.detect( imageMat, keypoints );
+    
+    //-- Draw keypoints
+    cv::Mat img_keypoints;
+    
+    drawKeypoints( imageMat, keypoints, img_keypoints, cv::Scalar::all(-1), cv::DrawMatchesFlags::DEFAULT );
+
+
+    UIImage* result = [UIImage imageWithCVMat:img_keypoints];
     return result;
 }
 

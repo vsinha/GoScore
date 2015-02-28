@@ -14,6 +14,7 @@
 
 #import <UIKit/UIKit.h>
 #import <opencv2/opencv.hpp>
+#import <opencv2/nonfree/nonfree.hpp>
 
 @interface UIImage (OpenCV)
 

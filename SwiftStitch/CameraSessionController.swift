@@ -177,6 +177,7 @@ class CameraSessionController: NSObject, AVCaptureVideoDataOutputSampleBufferDel
 
         self.cameraOutput.setSampleBufferDelegate(self, queue: self.sessionQueue)
         
+        
         if self.session.canAddOutput(self.cameraOutput) {
             self.session.addOutput(self.cameraOutput)
         }
@@ -270,8 +271,6 @@ class CameraSessionController: NSObject, AVCaptureVideoDataOutputSampleBufferDel
     
     // AVCaptureVideoDataOutputSampleBufferDelegate delegate method
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
-        
-        
         
         self.sessionDelegate?.cameraSessionDidOutputSampleBuffer?(sampleBuffer, fromConnection:connection)
     }
