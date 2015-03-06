@@ -41,9 +41,9 @@ class CameraSessionController: NSObject, AVCaptureVideoDataOutputSampleBufferDel
         // grab the (rear facing) camera
         self.configureCamera()
         
-        self.camera.addObserver(self, forKeyPath: "adjustingFocus", options: nil, context: nil)
-        self.camera.addObserver(self, forKeyPath: "adjustingExposure", options: nil, context: nil)
-        self.camera.addObserver(self, forKeyPath: "adjustingWhiteBalance", options: nil, context: nil)
+        //self.camera.addObserver(self, forKeyPath: "adjustingFocus", options: nil, context: nil)
+        //self.camera.addObserver(self, forKeyPath: "adjustingExposure", options: nil, context: nil)
+        //self.camera.addObserver(self, forKeyPath: "adjustingWhiteBalance", options: nil, context: nil)
         
         self.sessionQueue = dispatch_queue_create("CameraSessionController Session", DISPATCH_QUEUE_SERIAL)
         
@@ -177,7 +177,6 @@ class CameraSessionController: NSObject, AVCaptureVideoDataOutputSampleBufferDel
 
         self.cameraOutput.setSampleBufferDelegate(self, queue: self.sessionQueue)
         
-        
         if self.session.canAddOutput(self.cameraOutput) {
             self.session.addOutput(self.cameraOutput)
         }
@@ -187,6 +186,12 @@ class CameraSessionController: NSObject, AVCaptureVideoDataOutputSampleBufferDel
     func addStillImageOutput() {
         self.stillImageOutput = AVCaptureStillImageOutput()
         self.stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
+        
+        /*
+        self.stillImageOutput.
+        println(self.stillImageOutput.availableImageDataCVPixelFormatTypes
+        */
+        println("image stabilization?: \(self.stillImageOutput.stillImageStabilizationSupported)")
         
         if self.session.canAddOutput(self.stillImageOutput) {
             self.session.addOutput(self.stillImageOutput)

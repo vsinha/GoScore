@@ -46,18 +46,17 @@ class MainViewController: UIViewController, CameraSessionControllerDelegate {
         //self.cameraView.frame = self.view.frame
         //self.cameraView.hidden = true
 
-        
         // Initialize the camera...
         //captureSession.sessionPreset = AVCaptureSessionPresetHigh
         
         cameraSessionController = CameraSessionController()
         cameraSessionController.sessionDelegate = self
         
-        //self.setupPreviewLayer()
+        self.setupPreviewLayer()
         
         self.staticView.bounds = self.view.bounds
         self.staticView.frame = self.view.frame
-        self.view.bringSubviewToFront(self.staticView)
+        //self.view.bringSubviewToFront(self.staticView)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -71,7 +70,9 @@ class MainViewController: UIViewController, CameraSessionControllerDelegate {
         self.previewLayer.frame = self.cameraView.frame
         self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         self.previewLayer.backgroundColor = UIColor.blackColor().CGColor // UNNECESSARY PROBABLY
-        self.view.layer.addSublayer(self.previewLayer)
+        self.cameraView.layer.addSublayer(self.previewLayer)
+        
+        self.view.bringSubviewToFront(self.cameraView)
     }
     
     

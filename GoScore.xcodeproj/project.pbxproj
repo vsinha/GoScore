@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		95A89A721F114F618E29FA73 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A1402E6A4343CFA7DCF2FD /* libPods.a */; };
 		C0750B851AA14E300075E5C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0750B761AA14E300075E5C8 /* AppDelegate.swift */; };
-		C0750B861AA14E300075E5C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0750B771AA14E300075E5C8 /* Main.storyboard */; };
 		C0750B871AA14E300075E5C8 /* CameraSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0750B791AA14E300075E5C8 /* CameraSessionController.swift */; };
 		C0750B881AA14E300075E5C8 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0750B7B1AA14E300075E5C8 /* CVWrapper.mm */; };
 		C0750B891AA14E300075E5C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0750B7D1AA14E300075E5C8 /* Images.xcassets */; };
@@ -43,7 +42,6 @@
 		B04B9B3E7302847728F269A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C00B39561AA130FF00308BF3 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		C0750B761AA14E300075E5C8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0750B781AA14E300075E5C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0750B791AA14E300075E5C8 /* CameraSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraSessionController.swift; sourceTree = "<group>"; };
 		C0750B7A1AA14E300075E5C8 /* CVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
 		C0750B7B1AA14E300075E5C8 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
@@ -112,15 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				C0750B761AA14E300075E5C8 /* AppDelegate.swift */,
-				C0750B771AA14E300075E5C8 /* Main.storyboard */,
+				C0750B7F1AA14E300075E5C8 /* Main.storyboard */,
+				C0750B801AA14E300075E5C8 /* MainViewController.swift */,
 				C0750B791AA14E300075E5C8 /* CameraSessionController.swift */,
 				C0750B7A1AA14E300075E5C8 /* CVWrapper.h */,
 				C0750B7B1AA14E300075E5C8 /* CVWrapper.mm */,
 				C0750B7C1AA14E300075E5C8 /* GoScore-Bridging-Header.h */,
 				C0750B7D1AA14E300075E5C8 /* Images.xcassets */,
 				C0750B7E1AA14E300075E5C8 /* Info.plist */,
-				C0750B7F1AA14E300075E5C8 /* Main.storyboard */,
-				C0750B801AA14E300075E5C8 /* MainViewController.swift */,
 				C0750B811AA14E300075E5C8 /* stitching.cpp */,
 				C0750B821AA14E300075E5C8 /* stitching.h */,
 				C0750B831AA14E300075E5C8 /* UIImage+OpenCV.h */,
@@ -220,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0750B861AA14E300075E5C8 /* Main.storyboard in Resources */,
 				C0750B891AA14E300075E5C8 /* Images.xcassets in Resources */,
 				C0750B8B1AA14E300075E5C8 /* Main.storyboard in Resources */,
 			);
@@ -276,17 +272,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C0750B771AA14E300075E5C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0750B781AA14E300075E5C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AB896A9C193E8E830018B9EC /* Debug */ = {

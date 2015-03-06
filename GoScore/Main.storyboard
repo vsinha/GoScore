@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="vax-Rb-pN5">
             <objects>
-                <viewController id="Szr-Kk-nUW" customClass="MainViewController" customModule="SwiftStitch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Szr-Kk-nUW" customClass="MainViewController" customModule="GoScore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w4M-Ym-pS4"/>
                         <viewControllerLayoutGuide type="bottom" id="QuU-zQ-Wfg"/>
@@ -21,13 +22,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-2U-mv8" userLabel="staticView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WM7-2U-mv8" secondAttribute="height" multiplier="9:16" id="b5z-yW-tXy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="b5z-yW-tXy"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mbR-aE-ssf" userLabel="cameraView">
-                                <rect key="frame" x="16" y="617" width="72" height="50"/>
+                                <rect key="frame" x="16" y="547" width="56" height="100"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="mbR-aE-ssf" secondAttribute="height" multiplier="9:16" id="Ilm-lp-gA0"/>
                                     <constraint firstAttribute="width" constant="72" id="W1S-et-GSb"/>
-                                    <constraint firstAttribute="height" constant="50" id="xzy-bd-dHh"/>
+                                    <constraint firstAttribute="height" constant="100" id="xzy-bd-dHh"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="W1S-et-GSb"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,12 +52,18 @@
                             <constraint firstItem="mbR-aE-ssf" firstAttribute="leading" secondItem="6nI-lq-Vsp" secondAttribute="leadingMargin" id="Yzo-54-yxA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WM7-2U-mv8" secondAttribute="trailing" constant="-16" id="e1q-s4-sL1"/>
                             <constraint firstItem="WM7-2U-mv8" firstAttribute="leading" secondItem="6nI-lq-Vsp" secondAttribute="leadingMargin" constant="-16" id="hfq-T1-PwM"/>
+                            <constraint firstItem="QuU-zQ-Wfg" firstAttribute="top" secondItem="mbR-aE-ssf" secondAttribute="bottom" constant="20" id="iqH-0O-OxO"/>
                             <constraint firstItem="QuU-zQ-Wfg" firstAttribute="top" secondItem="WM7-2U-mv8" secondAttribute="bottom" id="tQk-WX-o0L"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6FC-zG-maq"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="cameraView" destination="mbR-aE-ssf" id="Hp6-0d-yCg"/>
+                        <outlet property="cameraView" destination="mbR-aE-ssf" id="Ys1-WT-wHZ"/>
                         <outlet property="staticView" destination="WM7-2U-mv8" id="2Y3-r4-Kds"/>
                     </connections>
                 </viewController>
