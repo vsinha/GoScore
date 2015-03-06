@@ -144,7 +144,8 @@ class CameraSessionController: NSObject, AVCaptureVideoDataOutputSampleBufferDel
     // TODO maybe if image processing performance differs on different devices 
     // we can try modify this based on the device...
     func setSessionPreset() {
-        self.session.sessionPreset = AVCaptureSessionPresetHigh
+//        self.session.sessionPreset = AVCaptureSessionPresetHigh
+        self.session.sessionPreset = AVCaptureSessionPreset1280x720
     }
 
 

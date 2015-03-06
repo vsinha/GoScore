@@ -24,20 +24,20 @@ class MainViewController: UIViewController, CameraSessionControllerDelegate {
     var previewLayer: AVCaptureVideoPreviewLayer!
 
     
-    // Lazily grab the camera
-    lazy var backCamera: AVCaptureDevice? = {
-        // Loop through all the capture devices on this phone
-        for device in AVCaptureDevice.devices() {
-            // Make sure this particular device supports video
-            if (device.hasMediaType(AVMediaTypeVideo)) {
-                // Finally check the position and confirm we've got the back camera
-                if(device.position == AVCaptureDevicePosition.Back) {
-                    return (device as? AVCaptureDevice)
-                }
-            }
-        }
-        return nil
-    }()
+//    // Lazily grab the camera
+//    lazy var backCamera: AVCaptureDevice? = {
+//        // Loop through all the capture devices on this phone
+//        for device in AVCaptureDevice.devices() {
+//            // Make sure this particular device supports video
+//            if (device.hasMediaType(AVMediaTypeVideo)) {
+//                // Finally check the position and confirm we've got the back camera
+//                if(device.position == AVCaptureDevicePosition.Back) {
+//                    return (device as? AVCaptureDevice)
+//                }
+//            }
+//        }
+//        return nil
+//    }()
     
     
     override func viewDidLoad() {
@@ -113,9 +113,9 @@ class MainViewController: UIViewController, CameraSessionControllerDelegate {
         
         let processedImage = CVWrapper.processImageWithOpenCV(capturedImage)
         
-        var rotatedProcessedImage = UIImage(CGImage: processedImage.CGImage, scale: CGFloat(1.0),orientation: UIImageOrientation.Right)
+//        var rotatedProcessedImage = UIImage(CGImage: processedImage.CGImage, scale: CGFloat(1.0),orientation: UIImageOrientation.Right)
         
-        self.staticView.image = rotatedProcessedImage
+        self.staticView.image = processedImage
     }
 }
 

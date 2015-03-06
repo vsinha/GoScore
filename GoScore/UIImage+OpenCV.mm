@@ -19,11 +19,23 @@
 
 @implementation UIImage (OpenCV)
 
+UIImageOrientation orientation;
+
 -(cv::Mat)CVMat
 {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(self.CGImage);
     CGFloat cols = self.size.width;
     CGFloat rows = self.size.height;
+    
+    // transpose rows/columns if the image is portrait orientation
+    if  (self.imageOrientation == UIImageOrientationLeft
+         || self.imageOrientation == UIImageOrientationRight) {
+        cols = self.size.height;
+        rows = self.size.width;
+    }
+    
+    // set the global so that initWithCVMat can re-set the UIImage flag (TODO: make this not janky)
+    orientation = self.imageOrientation;
     
     cv::Mat cvMat(rows, cols, CV_8UC4); // 8 bits per component, 4 channels
     
@@ -107,7 +119,7 @@
                                         );                     
     
         // Getting UIImage from CGImage
-    self = [self initWithCGImage:imageRef];
+    self = [self initWithCGImage:imageRef scale:1 orientation:orientation];
     CGImageRelease(imageRef);
     CGDataProviderRelease(provider);
     CGColorSpaceRelease(colorSpace);

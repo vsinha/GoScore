@@ -14,7 +14,6 @@
 		C0750B891AA14E300075E5C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0750B7D1AA14E300075E5C8 /* Images.xcassets */; };
 		C0750B8B1AA14E300075E5C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0750B7F1AA14E300075E5C8 /* Main.storyboard */; };
 		C0750B8C1AA14E300075E5C8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0750B801AA14E300075E5C8 /* MainViewController.swift */; };
-		C0750B8D1AA14E300075E5C8 /* stitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0750B811AA14E300075E5C8 /* stitching.cpp */; };
 		C0750B8E1AA14E300075E5C8 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0750B841AA14E300075E5C8 /* UIImage+OpenCV.mm */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +49,6 @@
 		C0750B7E1AA14E300075E5C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0750B7F1AA14E300075E5C8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C0750B801AA14E300075E5C8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		C0750B811AA14E300075E5C8 /* stitching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stitching.cpp; sourceTree = "<group>"; };
-		C0750B821AA14E300075E5C8 /* stitching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stitching.h; sourceTree = "<group>"; };
 		C0750B831AA14E300075E5C8 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
 		C0750B841AA14E300075E5C8 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
 		C3A1402E6A4343CFA7DCF2FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,13 +112,11 @@
 				C0750B791AA14E300075E5C8 /* CameraSessionController.swift */,
 				C0750B7A1AA14E300075E5C8 /* CVWrapper.h */,
 				C0750B7B1AA14E300075E5C8 /* CVWrapper.mm */,
+				C0750B831AA14E300075E5C8 /* UIImage+OpenCV.h */,
+				C0750B841AA14E300075E5C8 /* UIImage+OpenCV.mm */,
 				C0750B7C1AA14E300075E5C8 /* GoScore-Bridging-Header.h */,
 				C0750B7D1AA14E300075E5C8 /* Images.xcassets */,
 				C0750B7E1AA14E300075E5C8 /* Info.plist */,
-				C0750B811AA14E300075E5C8 /* stitching.cpp */,
-				C0750B821AA14E300075E5C8 /* stitching.h */,
-				C0750B831AA14E300075E5C8 /* UIImage+OpenCV.h */,
-				C0750B841AA14E300075E5C8 /* UIImage+OpenCV.mm */,
 			);
 			path = GoScore;
 			sourceTree = "<group>";
@@ -263,7 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0750B881AA14E300075E5C8 /* CVWrapper.mm in Sources */,
-				C0750B8D1AA14E300075E5C8 /* stitching.cpp in Sources */,
 				C0750B851AA14E300075E5C8 /* AppDelegate.swift in Sources */,
 				C0750B871AA14E300075E5C8 /* CameraSessionController.swift in Sources */,
 				C0750B8E1AA14E300075E5C8 /* UIImage+OpenCV.mm in Sources */,
