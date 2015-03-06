@@ -34,7 +34,7 @@
     //cv::threshold( inputGreyMat, inputGreyMat, 128, 255, 4);
     
     //reduce noise so we avoid false circle detection
-    cv::GaussianBlur(inputGreyMat, inputGreyMat, cv::Size(9, 9), 2, 2 );
+    cv::GaussianBlur(inputGreyMat, inputGreyMat, cv::Size(3, 3), 2, 2 );
     
 //    {
 //    double maxValue = 255; // Non-zero value assigned to the pixels for which the condition is satisfied.
